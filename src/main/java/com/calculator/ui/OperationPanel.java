@@ -7,11 +7,13 @@ import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Text;
 
+import com.calculator.App;
+
 public class OperationPanel extends Composite {
 
     Text firsOperand;
     Combo sign;
-    Text secondOperand;
+    Text  secondOperand;
 
     public OperationPanel(Composite parent, int style) {
         super(parent, style);
@@ -21,6 +23,7 @@ public class OperationPanel extends Composite {
         GridLayout gridLayout = new GridLayout();
         gridLayout.numColumns = 3;
         setLayout(gridLayout);
+        setBackground(App.BACKGROUND_COLOR);
 
         firsOperand = new Text(this, SWT.BORDER);
         GridData gridData = new GridData(SWT.FILL, SWT.FILL, true, false);

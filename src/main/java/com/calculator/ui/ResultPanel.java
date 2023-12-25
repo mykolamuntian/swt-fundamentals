@@ -7,6 +7,8 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 
+import com.calculator.App;
+
 public class ResultPanel extends Composite {
 
     public ResultPanel(Composite parent, int style) {
@@ -18,11 +20,13 @@ public class ResultPanel extends Composite {
         gridLayout.numColumns = 3;
         setLayout(gridLayout);
         setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
+        setBackground(App.BACKGROUND_COLOR);
 
         Label resultLabel = new Label(this, SWT.NONE);
         resultLabel.setText("Result");
         GridData gridData = new GridData(SWT.FILL, SWT.TOP, true, false);
         resultLabel.setLayoutData(gridData);
+        resultLabel.setBackground(App.BACKGROUND_COLOR);
 
         Text resultText = new Text(this, SWT.BORDER);
         gridData = new GridData(SWT.FILL, SWT.TOP, true, false);

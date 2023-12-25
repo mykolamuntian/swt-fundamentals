@@ -7,6 +7,8 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Text;
 
+import com.calculator.App;
+
 public class HistoryPanel extends Composite {
 
     public HistoryPanel(Composite parent, int style) {
@@ -16,6 +18,7 @@ public class HistoryPanel extends Composite {
     public void createUI() {
         FillLayout fillLayout = new FillLayout(SWT.VERTICAL);
         setLayout(fillLayout);
+        setBackground(App.BACKGROUND_COLOR);
 
         Text resultList = new Text(this, SWT.MULTI | SWT.BORDER | SWT.WRAP);
         Button clear = new Button(this, SWT.PUSH);

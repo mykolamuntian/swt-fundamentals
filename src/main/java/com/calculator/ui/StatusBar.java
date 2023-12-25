@@ -9,6 +9,8 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 
+import com.calculator.App;
+
 public class StatusBar extends Composite{
 
     public StatusBar(Composite parent, int style) {
@@ -19,6 +21,7 @@ public class StatusBar extends Composite{
         setLayout(new GridLayout());
         
         Label statusBar = new Label(this, SWT.NONE);
+        statusBar.setBackground(App.ALTERNATE_BACKGROUND);
         GridData gridData = new GridData(SWT.END, SWT.BOTTOM, true, true);
         statusBar.setLayoutData(gridData);
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
