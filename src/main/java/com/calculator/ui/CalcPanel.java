@@ -7,14 +7,15 @@ import org.eclipse.swt.widgets.Composite;
 
 public class CalcPanel extends Composite {
 
+    private static final int TOP_INDENTATION = 370;
+
     public CalcPanel(Composite parent, int style) {
         super(parent, style);
     }
 
     public void createUI() {
         GridLayout gridLayout = new GridLayout(1, false);
-        int space = (getParent().getShell().getSize().y - 370) / 3;
-        System.out.println("space = " + space);
+        int space = (this.getShell().getSize().y - TOP_INDENTATION) / 3;
         gridLayout.verticalSpacing = space;
         setLayout(gridLayout);
 
