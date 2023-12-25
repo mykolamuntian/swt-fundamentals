@@ -20,8 +20,8 @@ public class CalcPanel extends Composite {
         setLayout(gridLayout);
 
         OperationPanel operationPanel = new OperationPanel(this, SWT.NONE);
-        operationPanel.createUI();
         operationPanel.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
+        operationPanel.createUI();
 
         GridData gridData = new GridData(SWT.FILL, SWT.FILL, true, false);
         CalcModePanel calcModePanel = new CalcModePanel(this, SWT.NONE);
@@ -29,8 +29,8 @@ public class CalcPanel extends Composite {
         calcModePanel.createUI();
 
         ResultPanel resultPanel = new ResultPanel(this, SWT.NONE);
-        resultPanel.createUI();
         resultPanel.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
+        resultPanel.createUI();
     }
 
 }

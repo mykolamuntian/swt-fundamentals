@@ -22,13 +22,11 @@ public class ResultPanel extends Composite {
         Label resultLabel = new Label(this, SWT.NONE);
         resultLabel.setText("Result");
         GridData gridData = new GridData(SWT.FILL, SWT.TOP, true, false);
-        // gridData.verticalIndent = 30;
         resultLabel.setLayoutData(gridData);
 
         Text resultText = new Text(this, SWT.BORDER);
         gridData = new GridData(SWT.FILL, SWT.TOP, true, false);
         gridData.horizontalSpan = 2;
-        // gridData.verticalIndent = 30;
         resultText.setLayoutData(gridData);
 
     }
